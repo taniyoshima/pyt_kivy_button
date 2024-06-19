@@ -1,0 +1,36 @@
+#:kivy 2.0
+
+
+<ButtonTestWidget>:
+    BoxLayout:
+        size: root.size
+        orientation: 'vertical'
+        padding: 20
+        canvas.before:
+            Color:
+                rgba: 0.7, 0.7, 0.7, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        Button:
+            id: button1
+            text: 'Button1'
+            font_size: '20pt'
+            color: 0.1, 0.1, 0.1, 1
+            background_color: 0.1, 0.2, 1.0, 1
+            background_normal: ''
+
+        Button:
+            id: button2
+            size_hint: (None, None)
+            size: (200, 50)
+            background_normal: 'yukou.png'
+            background_down: 'yukouo.png'
+
+        Button:
+            id: button3
+            size_hint: (None, None)
+            size: (200, 50)
+            disabled: True
+            background_disabled_normal: 'mukou.png'
